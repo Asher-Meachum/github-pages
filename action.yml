@@ -19,7 +19,7 @@ jobs:
         run: sudo snap install zola --channel=${{ env.ZOLA_VERSION }}
       
       - name: Check Zola project
-        if: env.ZOLA_CHECK == true
+        if: env.ZOLA_CHECK == "true"
         run: zola check ${{ env.ZOLA_CHECK_FLAGS }}
 
       - name: Build Zola site files
